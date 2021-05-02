@@ -1,7 +1,8 @@
-{ nixpkgs }:
+{ nixpkgs, system }:
 let
   pkgs = import nixpkgs {
     config.allowUnfree = true;
+    inherit system;
   };
 in {
   inherit (pkgs)
